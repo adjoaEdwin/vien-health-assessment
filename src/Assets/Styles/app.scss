@@ -1,0 +1,21 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "fonts";
+@import "resets";
+@import "utils";
+
+// breakpoints
+@import "./breakpoints/sm";
+
+@media (min-width: 768px) {
+    @import "./breakpoints/md";
+}
+
+@media (min-width: 992px) {
+    @import "./breakpoints/lg";
+}
+
+@media (min-width: 1200px) {
+    @import "./breakpoints/xl";
+}

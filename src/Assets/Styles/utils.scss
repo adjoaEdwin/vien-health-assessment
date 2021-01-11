@@ -1,0 +1,115 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @each $value in $displays {
+            .d#{$infix}-#{$value} {
+                display: $value;
+            }
+        }
+
+        @each $value in $flex-align {
+            .justify-content#{$infix}-#{$value} {
+                justify-content: $value;
+            }
+
+            .align-items#{$infix}-#{$value} {
+                align-items: $value;
+            }
+        }
+
+        @each $value in $positions {
+            .position#{$infix}-#{$value} {
+                position: $value;
+            }
+        }
+
+        @each $value in $overflows {
+            .overflow-x#{$infix}-#{$value} {
+                overflow-x: $value;
+            }
+
+            .overflow-y#{$infix}-#{$value} {
+                overflow-y: $value;
+            }
+        }
+
+        @each $index, $value in $spacers {
+            .m#{$infix}-#{$index} {
+                margin: $value !important;
+            }
+            .mx#{$infix}-#{$index} {
+                margin-left: $value !important;
+                margin-right: $value !important;
+            }
+            .my#{$infix}-#{$index} {
+                margin-top: $value !important;
+                margin-bottom: $value !important;
+            }
+
+            .mr#{$infix}-#{$index} {
+                margin-right: $value !important;
+            }
+            .ml#{$infix}-#{$index} {
+                margin-left: $value !important;
+            }
+            .mb#{$infix}-#{$index} {
+                margin-bottom: $value !important;
+            }
+            .mt#{$infix}-#{$index} {
+                margin-top: $value !important;
+            }
+
+            .p#{$infix}-#{$index} {
+                padding: $value !important;
+            }
+            .px#{$infix}-#{$index} {
+                padding-right: $value !important;
+                padding-left: $value !important;
+            }
+            .py#{$infix}-#{$index} {
+                padding-top: $value !important;
+                padding-bottom: $value !important;
+            }
+            .pr#{$infix}-#{$index} {
+                padding-right: $value !important;
+            }
+            .pl#{$infix}-#{$index} {
+                padding-left: $value !important;
+            }
+            .pb#{$infix}-#{$index} {
+                padding-bottom: $value !important;
+            }
+            .pt#{$infix}-#{$index} {
+                padding-top: $value !important;
+            }
+        }
+
+        @each $index, $value in $sizes {
+            .h#{$infix}-#{$index} {
+                height: $value;
+            }
+            .w#{$infix}-#{$index} {
+                width: $value;
+            }
+        }
+    }
+}
+
+@each $name, $color in $colors {
+    .#{$name}-bg {
+        background-color: $color !important;
+    }
+
+    .#{$name}-text {
+        color: $color !important;
+    }
+
+    .#{$name}-border {
+        border-color: $color !important;
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

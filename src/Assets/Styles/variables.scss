@@ -1,0 +1,182 @@
+// colors
+$grey: #9ea0a5;
+$grey-1: #e5e5e5;
+$grey-2: #eaedf3;
+$grey-3: #eaecee;
+$blue: #226ec7;
+$black: #1a1a1a;
+$green: #016450;
+$green-80: #348373;
+$orange: #ff8433;
+$yellow: #facf55;
+$white: #ffffff;
+$white-10: #fdfdfd;
+$black-10: #e8e8e8;
+$black-20: #d1d1d1;
+$black-40: #a3a3a3;
+$black-60: #767676;
+$black-80: #484848;
+$light-green: #098b71;
+
+$colors: () !default;
+
+$colors: map-merge(
+    (
+        "grey": $grey,
+        "grey-1": $grey-1,
+        "grey-2": $grey-2,
+        "grey-3": $grey-3,
+        "blue": $blue,
+        "black": $black,
+        "green": $green,
+        "green-80": $green-80,
+        "orange": $orange,
+        "yellow": $yellow,
+        "white": $white,
+        "white-10": $white-10,
+        "black-10": $black-10,
+        "black-20": $black-20,
+        "black-40": $black-40,
+        "black-60": $black-60,
+        "black-80": $black-80,
+        "light-green": $light-green,
+    ),
+    $colors
+);
+
+// grids
+$grids: (
+    (
+        name: "sm",
+        grid: 0,
+    ),
+    (
+        name: "md",
+        grid: 768,
+    ),
+    (
+        name: "lg",
+        grid: 992,
+    ),
+    (
+        name: "xl",
+        grid: 1200,
+    )
+);
+
+// font family
+$font-family-base: "Airbnb Cereal App";
+
+// font weights
+$weights: (400, 500, 600, 700, 800);
+
+// others
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, grid, inline-flex !default;
+$overflows: auto, hidden !default;
+$positions: static, relative, absolute, fixed, sticky !default;
+$flex-align: center, flex-start, flex-end, space-between !default;
+
+// grids
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+) !default;
+
+// spaces
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+    (
+        auto: auto,
+        0: 0,
+        1: (
+            $spacer * 0.25,
+        ),
+        2: (
+            $spacer * 0.5,
+        ),
+        3: (
+            $spacer * 0.75,
+        ),
+        4: (
+            $spacer * 1,
+        ),
+        5: (
+            $spacer * 1.25,
+        ),
+        6: (
+            $spacer * 1.5,
+        ),
+        7: (
+            $spacer * 1.75,
+        ),
+        8: (
+            $spacer * 2,
+        ),
+        9: (
+            $spacer * 2.25,
+        ),
+        10: (
+            $spacer * 2.5,
+        ),
+        11: (
+            $spacer * 2.75,
+        ),
+        12: (
+            $spacer * 3,
+        ),
+        13: (
+            $spacer * 3.5,
+        ),
+        14: (
+            $spacer * 4,
+        ),
+    ),
+    $spacers
+);
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+$sizes: map-merge(
+    (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+    ),
+    $sizes
+);
+
+// shadow
+$shadow: 0px 2px 15px rgba(108, 126, 147, 0.1);
+$shadow-sm: 0px 12px 30px rgba(0, 0, 0, 0.08);
+$shadow-xs: 0px 1px 3px rgba(0, 0, 0, 0.04);
+
+// css variables
+:root {
+    --grey: #{$grey};
+    --grey-2: #{$grey-2};
+    --grey-3: #{$grey-2};
+    --blue: #{$blue};
+    --black: #{$black};
+    --green: #{$green};
+    --green-80: #{$green-80};
+    --orange: #{$orange};
+    --yellow: #{$yellow};
+    --white: #{$white};
+    --white-10: #{$white-10};
+    --black-10: #{$black-10};
+    --black-20: #{$black-20};
+    --black-40: #{$black-40};
+    --black-60: #{$black-60};
+    --black-80: #{$black-80};
+    --light-green: #{$light-green};
+
+    --shadow: #{$shadow};
+    --shadow-sm: #{$shadow-sm};
+    --shadow-xs: #{$shadow-xs};
+}
